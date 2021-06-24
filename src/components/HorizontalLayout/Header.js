@@ -1,7 +1,7 @@
 import React, { useState } from "react"
-import PropTypes from 'prop-types'
-import ReactDrawer from 'react-drawer';
-import 'react-drawer/lib/react-drawer.css';
+import PropTypes from "prop-types"
+import ReactDrawer from "react-drawer"
+import "react-drawer/lib/react-drawer.css"
 
 import { connect } from "react-redux"
 
@@ -39,16 +39,16 @@ const Header = props => {
   const [menu, setMenu] = useState(false)
   const [isSearch, setSearch] = useState(false)
   const [socialDrp, setsocialDrp] = useState(false)
-  const [position, setPosition] = useState();
-  const [open, setOpen] = useState(false);
+  const [position, setPosition] = useState()
+  const [open, setOpen] = useState(false)
 
   const toggleTopDrawer = () => {
-    setPosition('right');
+    setPosition("right")
     setOpen(!open)
   }
 
   const onDrawerClose = () => {
-    setOpen(false);
+    setOpen(false)
   }
 
   function toggleFullscreen() {
@@ -124,153 +124,6 @@ const Header = props => {
                 <span className="bx bx-search-alt" />
               </div>
             </form>
-
-            <Dropdown
-              className="dropdown-mega d-none d-lg-block ms-2"
-              isOpen={menu}
-              toggle={() => setMenu(!menu)}
-            >
-              <DropdownToggle
-                className="btn header-item "
-                caret
-                tag="button"
-              >
-                {props.t("Mega Menu")} <i className="mdi mdi-chevron-down" />
-              </DropdownToggle>
-              <DropdownMenu className="dropdown-megamenu">
-                <Row>
-                  <Col sm={8}>
-                    <Row>
-                      <Col md={4}>
-                        <h5 className="font-size-14 mt-0">
-                          {props.t("UI Components")}
-                        </h5>
-                        <ul className="list-unstyled megamenu-list">
-                          <li>
-                            <Link to="#">{props.t("Lightbox")}</Link>
-                          </li>
-                          <li>
-                            <Link to="#">{props.t("Range Slider")}</Link>
-                          </li>
-                          <li>
-                            <Link to="#">{props.t("Sweet Alert")}</Link>
-                          </li>
-                          <li>
-                            <Link to="#">{props.t("Rating")}</Link>
-                          </li>
-                          <li>
-                            <Link to="#">{props.t("Forms")}</Link>
-                          </li>
-                          <li>
-                            <Link to="#">{props.t("Tables")}</Link>
-                          </li>
-                          <li>
-                            <Link to="#">{props.t("Charts")}</Link>
-                          </li>
-                        </ul>
-                      </Col>
-
-                      <Col md={4}>
-                        <h5 className="font-size-14 mt-0">
-                          {props.t("Applications")}
-                        </h5>
-                        <ul className="list-unstyled megamenu-list">
-                          <li>
-                            <Link to="#">{props.t("Ecommerce")}</Link>
-                          </li>
-                          <li>
-                            <Link to="#">{props.t("Calendar")}</Link>
-                          </li>
-                          <li>
-                            <Link to="#">{props.t("Email")}</Link>
-                          </li>
-                          <li>
-                            <Link to="#">{props.t("Projects")}</Link>
-                          </li>
-                          <li>
-                            <Link to="#">{props.t("Tasks")}</Link>
-                          </li>
-                          <li>
-                            <Link to="#">{props.t("Contacts")}</Link>
-                          </li>
-                        </ul>
-                      </Col>
-
-                      <Col md={4}>
-                        <h5 className="font-size-14 mt-0">
-                          {props.t("Extra Pages")}
-                        </h5>
-                        <ul className="list-unstyled megamenu-list">
-                          <li>
-                            <Link to="#">{props.t("Light Sidebar")}</Link>
-                          </li>
-                          <li>
-                            <Link to="#">{props.t("Compact Sidebar")}</Link>
-                          </li>
-                          <li>
-                            <Link to="#">{props.t("Horizontal layout")}</Link>
-                          </li>
-                          <li>
-                            <Link to="#"> {props.t("Maintenance")}</Link>
-                          </li>
-                          <li>
-                            <Link to="#">{props.t("Coming Soon")}</Link>
-                          </li>
-                          <li>
-                            <Link to="#">{props.t("Timeline")}</Link>
-                          </li>
-                          <li>
-                            <Link to="#">{props.t("FAQs")}</Link>
-                          </li>
-                        </ul>
-                      </Col>
-                    </Row>
-                  </Col>
-                  <Col sm={4}>
-                    <Row>
-                      <Col sm={6}>
-                        <h5 className="font-size-14 mt-0">
-                          {props.t("UI Components")}
-                        </h5>
-                        <ul className="list-unstyled megamenu-list">
-                          <li>
-                            <Link to="#">{props.t("Lightbox")}</Link>
-                          </li>
-                          <li>
-                            <Link to="#">{props.t("Range Slider")}</Link>
-                          </li>
-                          <li>
-                            <Link to="#">{props.t("Sweet Alert")}</Link>
-                          </li>
-                          <li>
-                            <Link to="#">{props.t("Rating")}</Link>
-                          </li>
-                          <li>
-                            <Link to="#">{props.t("Forms")}</Link>
-                          </li>
-                          <li>
-                            <Link to="#">{props.t("Tables")}</Link>
-                          </li>
-                          <li>
-                            <Link to="#">{props.t("Charts")}</Link>
-                          </li>
-                        </ul>
-                      </Col>
-
-                      <Col sm={5}>
-                        <div>
-                          <img
-                            src={megamenuImg}
-                            alt=""
-                            className="img-fluid mx-auto d-block"
-                          />
-                        </div>
-                      </Col>
-                    </Row>
-                  </Col>
-                </Row>
-              </DropdownMenu>
-            </Dropdown>
           </div>
 
           <div className="d-flex">
@@ -311,9 +164,9 @@ const Header = props => {
               </div>
             </div>
 
-            <LanguageDropdown />
+            {/* <LanguageDropdown /> */}
 
-            <Dropdown
+            {/* <Dropdown
               className="d-none d-lg-inline-block ms-1"
               isOpen={socialDrp}
               toggle={() => {
@@ -371,7 +224,7 @@ const Header = props => {
                   </Row>
                 </div>
               </DropdownMenu>
-            </Dropdown>
+            </Dropdown> */}
 
             <div className="dropdown d-none d-lg-inline-block ms-1">
               <button
@@ -386,27 +239,24 @@ const Header = props => {
               </button>
             </div>
 
-            <NotificationDropdown />
+            {/* <NotificationDropdown /> */}
 
             <ProfileMenu />
 
-            <div className="dropdown d-inline-block">
+            {/* <div className="dropdown d-inline-block">
               <button
-                onClick={toggleTopDrawer} disabled={open}
+                onClick={toggleTopDrawer}
+                disabled={open}
                 type="button"
                 className="btn header-item noti-icon right-bar-toggle "
               >
                 <i className="bx bx-cog bx-spin" />
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </header>
-      <ReactDrawer
-        open={open}
-        position={position}
-        onClose={onDrawerClose}
-      >
+      <ReactDrawer open={open} position={position} onClose={onDrawerClose}>
         <RightSidebar onClose={onDrawerClose} />
       </ReactDrawer>
     </React.Fragment>
@@ -418,7 +268,7 @@ Header.propTypes = {
   showRightSidebar: PropTypes.any,
   showRightSidebarAction: PropTypes.func,
   t: PropTypes.any,
-  toggleLeftmenu: PropTypes.func
+  toggleLeftmenu: PropTypes.func,
 }
 
 const mapStatetoProps = state => {
